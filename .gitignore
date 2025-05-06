@@ -1,33 +1,47 @@
-# Visual Studio 일반
+# Visual Studio 기본 설정
 .vs/
-*.user
+*.vcxproj.user
 *.suo
-*.cache
-*.log
-
-# 빌드 출력물
-*.obj
-*.exe
-*.dll
-*.pdb
-*.lib
-*.ilk
-*.idb
-*.tlog
-
-# 자동 생성된 중간 파일
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.opendb
 *.ipch
-*.iobj
-*.ipdb
+*.obj
+*.pdb
+*.idb
+*.log
+*.tlog
+*.lastbuildstate
 *.aps
 *.ncb
-*.sdf
-*.opensdf
-*.VC.db
+*.opendb
+*.unsuccessfulbuild
+*.ilk
+*.cache
+*.iobj
+*.ipdb
 
-# 기타
-*.db
-*.tmp
+# 빌드 결과물
+Debug/
+Release/
+x64/
+x86/
+build/
+
+# CMake (만약 사용 중이라면)
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# 백업 파일
+*~
 *.bak
-*.swp
-*.sln.docstates
+*.tmp
+
+# 실행 파일
+*.exe
+*.out
+*.app
