@@ -12,3 +12,8 @@ class Boss : public Monster {
 public:
 	using Monster::Monster;
 };
+
+//몬스터 선언부
+extern const Monster slime;
+extern const Monster king_slime;
+extern const Monster chandelier;
