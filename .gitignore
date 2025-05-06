@@ -1,0 +1,33 @@
+# Visual Studio 일반
+.vs/
+*.user
+*.suo
+*.cache
+*.log
+
+# 빌드 출력물
+*.obj
+*.exe
+*.dll
+*.pdb
+*.lib
+*.ilk
+*.idb
+*.tlog
+
+# 자동 생성된 중간 파일
+*.ipch
+*.iobj
+*.ipdb
+*.aps
+*.ncb
+*.sdf
+*.opensdf
+*.VC.db
+
+# 기타
+*.db
+*.tmp
+*.bak
+*.swp
+*.sln.docstates

@@ -23,3 +23,4 @@ extern const FRUIT avocado;
 extern const FRUIT watermelon;
 
 //음료수 선언도 마찬가지
+extern const DRINK puresour;
