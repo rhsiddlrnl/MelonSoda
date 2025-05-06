@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\MelonSoda\\MelonSoda\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|C:\\MelonSoda\\MelonSoda\\MelonSoda\\MelonSoda.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|solutionrelative:MelonSoda\\MelonSoda.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MelonSoda.cpp",
+              "DocumentMoniker": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\MelonSoda.cpp",
+              "RelativeDocumentMoniker": "MelonSoda\\MelonSoda.cpp",
+              "ToolTip": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\MelonSoda.cpp",
+              "RelativeToolTip": "MelonSoda\\MelonSoda.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-05-06T11:01:03.514Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
