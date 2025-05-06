@@ -55,7 +55,7 @@ void Battle(Player& player, Monster& monster)
 int dmg(Actor attacker, Actor defender)
 {
 	int dmg = 0;
-	dmg = attacker.ATK;
+	dmg = (attacker.ATK * 100) / (defender.DEF + 100);
 	std::cout << attacker.name << "이(가) " << defender.name << "에게 " << dmg << "만큼의 피해를 입혔다!" << std::endl;
 	return dmg;
 }
