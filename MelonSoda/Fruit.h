@@ -14,7 +14,9 @@ public:
 	using FRUIT::FRUIT;
 };
 
-//°úÀÏ ¼±¾ğ extern const ºÙÀÌ±â
+DRINK operator+(const FRUIT& fruit1, const FRUIT& fruit2);
+
+//ê³¼ì¼ ì„ ì–¸ extern const ë¶™ì´ê¸°
 extern const FRUIT orange;
 extern const FRUIT apple;
 extern const FRUIT grapefruit;
@@ -22,5 +24,17 @@ extern const FRUIT grape;
 extern const FRUIT avocado;
 extern const FRUIT watermelon;
 
-//À½·á¼ö ¼±¾ğµµ ¸¶Âù°¡Áö
+//ìŒë£Œìˆ˜ ì„ ì–¸ë„ ë§ˆì°¬ê°€ì§€
 extern const DRINK puresour;
+extern const DRINK twoblood;
+extern const DRINK darklip;
+extern const DRINK unlock;
+extern const DRINK deepjune;
+extern const DRINK heaven;
+extern const DRINK mellowyellow;
+extern const DRINK darkseed;
+extern const DRINK oceanmood;
+extern const DRINK sourshower;
+extern const DRINK squished;
+extern const DRINK clearred;
+extern const DRINK unluckymelon;
