@@ -49,23 +49,23 @@ void Player::addInventory(FRUIT fruit) {
 	if (fruit.MP != 0) std::cout << "마나가 " << fruit.MP << " ";
 	if (fruit.ATK != 0) std::cout << "공격력이 " << fruit.ATK << " ";
 	if (fruit.DEF != 0) std::cout << "방어력이 " << fruit.DEF << " ";
-	std::cout << "증가했다." << std::endl;
+	std::cout << "만큼 변화했다." << std::endl;
 }
 
 void Player::useInventory(FRUIT fruit) {
 	auto it = std::find(fruit_inventory.begin(), fruit_inventory.end(), fruit);
 	if (it != fruit_inventory.end()) {
-		std::cout << it->name << "을(를) 사용했습니다. ";
+		std::cout << it->name << "의 효과가 사라졌다." << std::endl;
 		HP -= it->HP;
 		MP -= it->MP;
 		ATK -= it->ATK;
 		DEF -= it->DEF;
 
-		if (fruit.HP != 0) std::cout << "체력이 " << it->HP << " ";
-		if (fruit.MP != 0) std::cout << "마나가 " << it->MP << " ";
-		if (fruit.ATK != 0) std::cout << "공격력이 " << it->ATK << " ";
-		if (fruit.DEF != 0) std::cout << "방어력이 " << it->DEF << " ";
-		std::cout << "감소했다." << std::endl;
+		//if (fruit.HP != 0) std::cout << "체력이 " << it->HP << " ";
+		//if (fruit.MP != 0) std::cout << "마나가 " << it->MP << " ";
+		//if (fruit.ATK != 0) std::cout << "공격력이 " << it->ATK << " ";
+		//if (fruit.DEF != 0) std::cout << "방어력이 " << it->DEF << " ";
+		//std::cout << "감소했다." << std::endl;
 
 		fruit_inventory.erase(it);
 	}
@@ -97,5 +97,5 @@ void Player::addDrink(DRINK drink)
 	if (drink.MP != 0) std::cout << "마나가 " << drink.MP << " ";
 	if (drink.ATK != 0) std::cout << "공격력이 " << drink.ATK << " ";
 	if (drink.DEF != 0) std::cout << "방어력이 " << drink.DEF << " ";
-	std::cout << "증가했다." << std::endl;
+	std::cout << "증가했다!" << std::endl;
 }

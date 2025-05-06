@@ -147,9 +147,30 @@ void afterBattle(Player& player)
 			int fruitSelect2 = 0;
 			std::cout << "무슨 과일로 만들까?" << std::endl;
 			player.showInventory();
+			//std::cout << player.fruit_inventory.size() << std::endl;
 			std::cin >> fruitSelect1;
+			if (fruitSelect1 > player.fruit_inventory.size()) {
+				std::cout << "가지고 있지 않는 것 같다..." << std::endl;
+				continue;
+			}
 			std::cin >> fruitSelect2;
-			player.blendFruit(player.fruit_inventory[fruitSelect1 - 1], player.fruit_inventory[fruitSelect2 - 1]);
+			if (fruitSelect1 == fruitSelect2) {
+				std::cout << "이미 선택한 과일이다..." << std::endl;
+				continue;
+			}
+			if (fruitSelect2 > player.fruit_inventory.size()) {
+				std::cout << "가지고 있지 않는 것 같다..." << std::endl;
+				continue;
+			}
+			std::cout << player.fruit_inventory[fruitSelect1 - 1].name << "와(과)" << player.fruit_inventory[fruitSelect2 - 1].name << "을(를) 사용해서 음료를 만들까?" << std::endl;
+			std::cout << "1. 당장 만들자! 2. 다시 생각해보자" << std::endl;
+			std::cin >> playerSelect;
+			if (playerSelect == 1) {
+				player.blendFruit(player.fruit_inventory[fruitSelect1 - 1], player.fruit_inventory[fruitSelect2 - 1]);
+			}
+			else {
+				continue;
+			}
 		}
 		else if (playerSelect == 4) {
 			player.showPStat();
