@@ -5,7 +5,8 @@
 
 class Player : public Actor {
 public:
-	std::vector<FRUIT> inventory;
+	std::vector<FRUIT> fruit_inventory;
+	std::vector<DRINK> drink_inventory;
 	int story_index;
 
 	Player(std::string player_name);
@@ -15,4 +16,5 @@ public:
 	void addInventory(FRUIT fruit);
 	void useInventory(FRUIT fruit);
 	void blendFruit(FRUIT fruit1, FRUIT fruit2);
+	void addDrink(DRINK drink);
 };

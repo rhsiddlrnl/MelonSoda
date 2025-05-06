@@ -143,6 +143,13 @@ void afterBattle(Player& player)
 		}
 		else if (playerSelect == 3) {
 			std::cout << "blend system은 아직 미구현이지비" << std::endl;
+			int fruitSelect1 = 0;
+			int fruitSelect2 = 0;
+			std::cout << "무슨 과일로 만들까?" << std::endl;
+			player.showInventory();
+			std::cin >> fruitSelect1;
+			std::cin >> fruitSelect2;
+			player.blendFruit(player.fruit_inventory[fruitSelect1 - 1], player.fruit_inventory[fruitSelect2 - 1]);
 		}
 		else if (playerSelect == 4) {
 			player.showPStat();
