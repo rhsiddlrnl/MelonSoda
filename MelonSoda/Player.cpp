@@ -21,14 +21,14 @@ void Player::showPStat() {
 void Player::showInventory() {
 	int num = 1;
 	if (!fruit_inventory.empty()) {
-		std::cout << "---°úÀÏ ÁÖ¸Ó´Ï---" << std::endl;
+		std::cout << "---ê³¼ì¼ ì£¼ë¨¸ë‹ˆ---" << std::endl;
 		for (const auto& item : fruit_inventory) {
 			std::cout << num++ << " " << item.name << std::endl;
 		}
 	}
 	
 	if (!drink_inventory.empty()) {
-		std::cout << "---¸¶½Å À½·á¼ö---" << std::endl;
+		std::cout << "---ë§ˆì‹  ìŒë£Œìˆ˜---" << std::endl;
 		for (const auto& item : drink_inventory) {
 			std::cout << item.name << std::endl;
 		}
@@ -37,40 +37,39 @@ void Player::showInventory() {
 
 void Player::addInventory(FRUIT fruit) {
 	fruit_inventory.push_back(fruit);
-	std::cout << fruit.name << "À»(¸¦) È¹µæÇß´Ù!" << std::endl;
-
+	std::cout << fruit.name << "ì„(ë¥¼) íšë“í–ˆë‹¤!" << std::endl;
 	HP += fruit.HP;
 	MP += fruit.MP;
 	ATK += fruit.ATK;
 	DEF += fruit.DEF;
 
-	std::cout << fruit.name << "À»(¸¦) ÁÖ¸Ó´Ï¿¡ ³Ö¾ú´Ù. ";
-	if (fruit.HP != 0) std::cout << "Ã¼·ÂÀÌ " << fruit.HP << " ";
-	if (fruit.MP != 0) std::cout << "¸¶³ª°¡ " << fruit.MP << " ";
-	if (fruit.ATK != 0) std::cout << "°ø°Ý·ÂÀÌ " << fruit.ATK << " ";
-	if (fruit.DEF != 0) std::cout << "¹æ¾î·ÂÀÌ " << fruit.DEF << " ";
-	std::cout << "¸¸Å­ º¯È­Çß´Ù." << std::endl;
+	std::cout << fruit.name << "ì„(ë¥¼) ì£¼ë¨¸ë‹ˆì— ë„£ì—ˆë‹¤. ";
+	if (fruit.HP != 0) std::cout << "ì²´ë ¥ì´ " << fruit.HP << " ";
+	if (fruit.MP != 0) std::cout << "ë§ˆë‚˜ê°€ " << fruit.MP << " ";
+	if (fruit.ATK != 0) std::cout << "ê³µê²©ë ¥ì´ " << fruit.ATK << " ";
+	if (fruit.DEF != 0) std::cout << "ë°©ì–´ë ¥ì´ " << fruit.DEF << " ";
+	std::cout << "ë§Œí¼ ë³€í™”í–ˆë‹¤." << std::endl;
 }
 
 void Player::useInventory(FRUIT fruit) {
 	auto it = std::find(fruit_inventory.begin(), fruit_inventory.end(), fruit);
 	if (it != fruit_inventory.end()) {
-		std::cout << it->name << "ÀÇ È¿°ú°¡ »ç¶óÁ³´Ù." << std::endl;
+		std::cout << it->name << "ì˜ íš¨ê³¼ê°€ ì‚¬ë¼ì¡Œë‹¤." << std::endl;
 		HP -= it->HP;
 		MP -= it->MP;
 		ATK -= it->ATK;
 		DEF -= it->DEF;
 
-		//if (fruit.HP != 0) std::cout << "Ã¼·ÂÀÌ " << it->HP << " ";
-		//if (fruit.MP != 0) std::cout << "¸¶³ª°¡ " << it->MP << " ";
-		//if (fruit.ATK != 0) std::cout << "°ø°Ý·ÂÀÌ " << it->ATK << " ";
-		//if (fruit.DEF != 0) std::cout << "¹æ¾î·ÂÀÌ " << it->DEF << " ";
-		//std::cout << "°¨¼ÒÇß´Ù." << std::endl;
+		//if (fruit.HP != 0) std::cout << "ì²´ë ¥ì´ " << it->HP << " ";
+		//if (fruit.MP != 0) std::cout << "ë§ˆë‚˜ê°€ " << it->MP << " ";
+		//if (fruit.ATK != 0) std::cout << "ê³µê²©ë ¥ì´ " << it->ATK << " ";
+		//if (fruit.DEF != 0) std::cout << "ë°©ì–´ë ¥ì´ " << it->DEF << " ";
+		//std::cout << "ê°ì†Œí–ˆë‹¤." << std::endl;
 
 		fruit_inventory.erase(it);
 	}
 	else {
-		std::cout << "ÇØ´ç ¾ÆÀÌÅÛÀÌ ¾ø½À´Ï´Ù." << std::endl;
+		std::cout << "í•´ë‹¹ ì•„ì´í…œì´ ì—†ìŠµë‹ˆë‹¤." << std::endl;
 	}
 }
 
@@ -85,17 +84,16 @@ void Player::blendFruit(FRUIT fruit1, FRUIT fruit2) {
 void Player::addDrink(DRINK drink)
 {
 	drink_inventory.push_back(drink);
-	std::cout << drink.name << "À»(¸¦) ¸¸µé¾ú´Ù!" << std::endl;
-
+	std::cout << drink.name << "ì„(ë¥¼) ë§Œë“¤ì—ˆë‹¤!" << std::endl;
 	HP += drink.HP;
 	MP += drink.MP;
 	ATK += drink.ATK;
 	DEF += drink.DEF;
 
-	std::cout << drink.name << "À»(¸¦) ¸¶¼Ì´Ù. ";
-	if (drink.HP != 0) std::cout << "Ã¼·ÂÀÌ " << drink.HP << " ";
-	if (drink.MP != 0) std::cout << "¸¶³ª°¡ " << drink.MP << " ";
-	if (drink.ATK != 0) std::cout << "°ø°Ý·ÂÀÌ " << drink.ATK << " ";
-	if (drink.DEF != 0) std::cout << "¹æ¾î·ÂÀÌ " << drink.DEF << " ";
-	std::cout << "Áõ°¡Çß´Ù!" << std::endl;
+	std::cout << drink.name << "ì„(ë¥¼) ë§ˆì…¨ë‹¤. ";
+	if (drink.HP != 0) std::cout << "ì²´ë ¥ì´ " << drink.HP << " ";
+	if (drink.MP != 0) std::cout << "ë§ˆë‚˜ê°€ " << drink.MP << " ";
+	if (drink.ATK != 0) std::cout << "ê³µê²©ë ¥ì´ " << drink.ATK << " ";
+	if (drink.DEF != 0) std::cout << "ë°©ì–´ë ¥ì´ " << drink.DEF << " ";
+	std::cout << "ì¦ê°€í–ˆë‹¤!" << std::endl;
 }

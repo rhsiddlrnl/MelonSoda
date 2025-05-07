@@ -16,7 +16,7 @@ public:
 
 DRINK operator+(const FRUIT& fruit1, const FRUIT& fruit2);
 
-//°úÀÏ ¼±¾ğ extern const ºÙÀÌ±â
+//ê³¼ì¼ ì„ ì–¸ extern const ë¶™ì´ê¸°
 extern const FRUIT orange;
 extern const FRUIT apple;
 extern const FRUIT grapefruit;
@@ -24,7 +24,7 @@ extern const FRUIT grape;
 extern const FRUIT avocado;
 extern const FRUIT watermelon;
 
-//À½·á¼ö ¼±¾ğµµ ¸¶Âù°¡Áö
+//ìŒë£Œìˆ˜ ì„ ì–¸ë„ ë§ˆì°¬ê°€ì§€
 extern const DRINK puresour;
 extern const DRINK twoblood;
 extern const DRINK darklip;
