@@ -38,7 +38,6 @@ void Player::showInventory() {
 void Player::addInventory(FRUIT fruit) {
 	fruit_inventory.push_back(fruit);
 	std::cout << fruit.name << "을(를) 획득했다!" << std::endl;
-
 	HP += fruit.HP;
 	MP += fruit.MP;
 	ATK += fruit.ATK;
@@ -86,7 +85,6 @@ void Player::addDrink(DRINK drink)
 {
 	drink_inventory.push_back(drink);
 	std::cout << drink.name << "을(를) 만들었다!" << std::endl;
-
 	HP += drink.HP;
 	MP += drink.MP;
 	ATK += drink.ATK;
