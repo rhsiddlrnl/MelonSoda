@@ -16,4 +16,5 @@ public:
 //몬스터 선언부
 extern const Monster slime;
 extern const Monster king_slime;
+extern const Monster waterrat;
 extern const Monster chandelier;

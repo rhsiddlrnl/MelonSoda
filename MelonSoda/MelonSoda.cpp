@@ -7,6 +7,13 @@
 
 int main() {
 	srand(time(NULL));
+	std::map<int, Monster> monsterMap = {
+		{1, slime},
+		{2, king_slime},
+		{3, waterrat},
+		{5, chandelier}
+	};
+
 	std::string player_Name;
 
 	std::cout << "성함을 입력해주세요 : ";
@@ -14,12 +21,6 @@ int main() {
 
 	Player player(player_Name);
 	player.showPStat();
-
-	Monster monster1("돼지", 20, 0, 5, 5);
-	Monster monster2("소", 10, 0, 5, 5);
-	Battle(player, monster1);
-	afterBattle(player);
-	Battle(player, monster2);
-	afterBattle(player);
+	GAME(player, monsterMap);
 	return 0;
 }

@@ -4,7 +4,7 @@
 
 Player::Player(std::string player_name) {
 	name = player_name;
-	HP = 20;
+	HP = 100;
 	MP = 10;
 	ATK = 10;
 	DEF = 5;
