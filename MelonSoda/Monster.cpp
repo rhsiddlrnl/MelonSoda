@@ -15,7 +15,7 @@ void Monster::showMStat() {
 	std::cout << "HP : " << HP << std::endl;
 }
 
-//ëª¬ìŠ¤í„° ì •ì˜ ë³´ìŠ¤ì „ ì§ì „ ëª¬ìŠ¤í„°í•œí…Œë§Œ ë§ˆì§€ë§‰ì— ë§¤ê°œë³€ìˆ˜ ì¶”ê°€í•˜ê¸° ex) const Montser preBoss("ë³´ìŠ¤ ì§ì „ ëª¬ìŠ¤í„°", 50, 4, 5, 1, 3, 5);
-const Monster slime("ìŠ¬ë¼ìž„", 24, 0, 5, 3);
-const Monster king_slime("í‚¹ìŠ¬ë¼ìž„", 37, 0, 8, 7);
-const Monster chandelier("ìƒ¹ë“¤ë¦¬ì—", 61, 6, 13, 10);
+//¸ó½ºÅÍ Á¤ÀÇ º¸½ºÀü Á÷Àü ¸ó½ºÅÍÇÑÅ×¸¸ ¸¶Áö¸·¿¡ ¸Å°³º¯¼ö Ãß°¡ÇÏ±â ex) const Montser preBoss("º¸½º Á÷Àü ¸ó½ºÅÍ", 50, 4, 5, 1, 3, 5);
+const Monster slime("½½¶óÀÓ", 24, 0, 5, 3);
+const Monster king_slime("Å·½½¶óÀÓ", 37, 0, 8, 7);
+const Monster chandelier("¼§µé¸®¿¡", 61, 6, 13, 10);

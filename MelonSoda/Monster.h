@@ -13,7 +13,7 @@ public:
 	using Monster::Monster;
 };
 
-//ëª¬ìŠ¤í„° ì„ ì–¸ë¶€
+//¸ó½ºÅÍ ¼±¾ðºÎ
 extern const Monster slime;
 extern const Monster king_slime;
 extern const Monster chandelier;

@@ -15,28 +15,28 @@ bool FRUIT::operator==(const FRUIT& other) const {
 	return name == other.name && Index == other.Index;
 }
 
-//ê³¼ì¼("ì´ë¦„", ì²´ë ¥, ë§ˆë‚˜, ê³µê²©ë ¥, ë°©ì–´ë ¥, ë¸”ë Œë“œìš©ë²ˆí˜¸) ë¸”ë Œë“œìš© ë²ˆí˜¸ëŠ” 1 2 4 8 16 32 64 128...ì´ëŸ°ì‹ìœ¼ë¡œ ë¶€ì—¬í•  ê²ƒ
-const FRUIT orange("ì˜¤ë Œì§€", 1, 0, 2, 0, 1);
-const FRUIT apple("ì‚¬ê³¼",0, 2, 0, 2, 2);
-const FRUIT grapefruit("ìëª½", 0, 0, 3, -1, 4);
-const FRUIT grape("í¬ë„", 3, 0, -2, 0, 8);
-const FRUIT avocado("ì•„ë³´ì¹´ë„", 0, -2, 0, 2, 16);
-const FRUIT watermelon("ìˆ˜ë°•", -3, 0, 2, -1, 32);
+//°úÀÏ("ÀÌ¸§", Ã¼·Â, ¸¶³ª, °ø°İ·Â, ¹æ¾î·Â, ºí·»µå¿ë¹øÈ£) ºí·»µå¿ë ¹øÈ£´Â 1 2 4 8 16 32 64 128...ÀÌ·±½ÄÀ¸·Î ºÎ¿©ÇÒ °Í
+const FRUIT orange("¿À·»Áö", 1, 0, 2, 0, 1);
+const FRUIT apple("»ç°ú",0, 2, 0, 2, 2);
+const FRUIT grapefruit("ÀÚ¸ù", 0, 0, 3, -1, 4);
+const FRUIT grape("Æ÷µµ", 3, 0, -2, 0, 8);
+const FRUIT avocado("¾Æº¸Ä«µµ", 0, -2, 0, 2, 16);
+const FRUIT watermelon("¼ö¹Ú", -3, 0, 2, -1, 32);
 
-//ìŒë£Œìˆ˜("ì´ë¦„", ì²´ë ¥, ë§ˆë‚˜, ê³µê²©ë ¥, ë°©ì–´ë ¥, ë¸”ë Œë“œìš©ë²ˆí˜¸) ë¸”ë Œë“œìš© ë²ˆí˜¸ëŠ” ê³¼ì¼ ë¸”ë Œë“œìš©ë²ˆí˜¸ 2ê°œí•©ìœ¼ë¡œ ë¶€ì—¬í•  ê²ƒ
-const DRINK puresour("í“¨ì–´ì‚¬ì›Œ", 0, 0, 4, 4, 1+2);
-const DRINK twoblood("íˆ¬ ë¸”ë¡œë“œ", 5, 0, 6, 0, 1+4);
-const DRINK darklip("ë‹¤í¬ ë¦½", 3, 0, 0, 4, 1+8);
-const DRINK unlock("ì–¸ë¡", 0, 0, 0, 7, 1+16);
-const DRINK deepjune("ë”¥ ì¥°", 0, 5, 0, 4, 2+4);
-const DRINK heaven("í—¤ë¸", 0, 2, 3, 3, 2+8);
-const DRINK mellowyellow("ë©œë¡œìš° ì˜ë¡œìš°", 0, 0, 7, 0, 2+32);
-const DRINK darkseed("ë‹¤í¬ì‹œë“œ", 4, 0, 6, 0, 4+8);
-const DRINK oceanmood("ì˜¤ì…˜ë¬´ë“œ", 3, 0, 0, 5, 4+16);
-const DRINK sourshower("ì‚¬ì›Œìƒ¤ì›Œ", 5, 0, 0, 3, 8+16);
-const DRINK squished("ìŠ¤í€´ì‹œë“œ", 3, 3, 5, 0, 8+32);
-const DRINK clearred("í´ë¦¬ì–´ ë ˆë“œ", 6, 3, 5, 0, 16+32);
-const DRINK unluckymelon("ì–¸ëŸ­í‚¤ë©œë¡ ", 5, 5, 5, 5, 32+32);
+//À½·á¼ö("ÀÌ¸§", Ã¼·Â, ¸¶³ª, °ø°İ·Â, ¹æ¾î·Â, ºí·»µå¿ë¹øÈ£) ºí·»µå¿ë ¹øÈ£´Â °úÀÏ ºí·»µå¿ë¹øÈ£ 2°³ÇÕÀ¸·Î ºÎ¿©ÇÒ °Í
+const DRINK puresour("Ç»¾î»ç¿ö", 0, 0, 4, 4, 1+2);
+const DRINK twoblood("Åõ ºí·Îµå", 5, 0, 6, 0, 1+4);
+const DRINK darklip("´ÙÅ© ¸³", 3, 0, 0, 4, 1+8);
+const DRINK unlock("¾ğ·Ï", 0, 0, 0, 7, 1+16);
+const DRINK deepjune("µö Áë", 0, 5, 0, 4, 2+4);
+const DRINK heaven("Çìºì", 0, 2, 3, 3, 2+8);
+const DRINK mellowyellow("¸á·Î¿ì ¿»·Î¿ì", 0, 0, 7, 0, 2+32);
+const DRINK darkseed("´ÙÅ©½Ãµå", 4, 0, 6, 0, 4+8);
+const DRINK oceanmood("¿À¼Ç¹«µå", 3, 0, 0, 5, 4+16);
+const DRINK sourshower("»ç¿ö»ş¿ö", 5, 0, 0, 3, 8+16);
+const DRINK squished("½ºÄû½Ãµå", 3, 3, 5, 0, 8+32);
+const DRINK clearred("Å¬¸®¾î ·¹µå", 6, 3, 5, 0, 16+32);
+const DRINK unluckymelon("¾ğ·°Å°¸á·Ğ", 5, 5, 5, 5, 32+32);
 
 std::map<int, DRINK> drinkMap = {
     {1 + 2, puresour},
@@ -61,7 +61,7 @@ DRINK operator+(const FRUIT& fruit1, const FRUIT& fruit2)
         return drinkMap[blendIndex];
     }
     else {
-        std::cout << "í ...ë” ë‚˜ì€ ì¡°í•©ë²•ì´ ìˆì§€ ì•Šì•˜ì„ê¹Œ?" << std::endl;
-        return DRINK("ê·¸ëƒ¥ì €ëƒ¥ ìŒë£Œìˆ˜", 0, 0, 2, 2);
+        std::cout << "Èì...´õ ³ªÀº Á¶ÇÕ¹ıÀÌ ÀÖÁö ¾Ê¾ÒÀ»±î?" << std::endl;
+        return DRINK("±×³ÉÀú³É À½·á¼ö", 0, 0, 2, 2);
     }
 }

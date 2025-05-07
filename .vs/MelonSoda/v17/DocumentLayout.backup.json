@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|solutionrelative:MelonSoda\\Battle.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|C:\\MelonSoda\\MelonSoda\\MelonSoda\\Battle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|solutionrelative:MelonSoda\\Battle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|C:\\MelonSoda\\MelonSoda\\MelonSoda\\Monster.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|solutionrelative:MelonSoda\\Monster.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|C:\\MelonSoda\\MelonSoda\\MelonSoda\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|solutionrelative:MelonSoda\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -15,24 +23,16 @@
       "RelativeMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|solutionrelative:MelonSoda\\Player.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|C:\\MelonSoda\\MelonSoda\\MelonSoda\\Battle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|solutionrelative:MelonSoda\\Battle.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|C:\\MelonSoda\\MelonSoda\\MelonSoda\\Fruit.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|solutionrelative:MelonSoda\\Fruit.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|C:\\MelonSoda\\MelonSoda\\MelonSoda\\MelonSoda.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|solutionrelative:MelonSoda\\MelonSoda.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|C:\\MelonSoda\\MelonSoda\\MelonSoda\\Monster.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|solutionrelative:MelonSoda\\Monster.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|C:\\MelonSoda\\MelonSoda\\MelonSoda\\MelonSoda.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|solutionrelative:MelonSoda\\MelonSoda.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|C:\\MelonSoda\\MelonSoda\\MelonSoda\\Monster.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|solutionrelative:MelonSoda\\Monster.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|C:\\MelonSoda\\MelonSoda\\MelonSoda\\Fruit.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|solutionrelative:MelonSoda\\Fruit.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{967AA10E-C66F-4B26-9D53-289DEF4E4143}|MelonSoda\\MelonSoda.vcxproj|C:\\MelonSoda\\MelonSoda\\MelonSoda\\Fruit.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -54,7 +54,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "MelonSoda.cpp",
               "DocumentMoniker": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\MelonSoda.cpp",
               "RelativeDocumentMoniker": "MelonSoda\\MelonSoda.cpp",
@@ -62,12 +62,11 @@
               "RelativeToolTip": "MelonSoda\\MelonSoda.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-06T11:01:03.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T11:01:03.514Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Monster.cpp",
               "DocumentMoniker": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\Monster.cpp",
               "RelativeDocumentMoniker": "MelonSoda\\Monster.cpp",
@@ -75,12 +74,11 @@
               "RelativeToolTip": "MelonSoda\\Monster.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-06T11:07:28.274Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T11:07:28.274Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "Monster.h",
               "DocumentMoniker": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\Monster.h",
               "RelativeDocumentMoniker": "MelonSoda\\Monster.h",
@@ -88,8 +86,7 @@
               "RelativeToolTip": "MelonSoda\\Monster.h",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-06T11:07:17.708Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T11:07:17.708Z"
             },
             {
               "$type": "Document",
@@ -101,12 +98,11 @@
               "RelativeToolTip": "MelonSoda\\Fruit.cpp",
               "ViewState": "AgIAACQAAAAAAAAAAAAAABoAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-06T11:07:44.861Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T11:07:44.861Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Fruit.h",
               "DocumentMoniker": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\Fruit.h",
               "RelativeDocumentMoniker": "MelonSoda\\Fruit.h",
@@ -114,25 +110,23 @@
               "RelativeToolTip": "MelonSoda\\Fruit.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-06T11:07:34.612Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T11:07:34.612Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Player.cpp",
               "DocumentMoniker": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\Player.cpp",
               "RelativeDocumentMoniker": "MelonSoda\\Player.cpp",
               "ToolTip": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\Player.cpp",
               "RelativeToolTip": "MelonSoda\\Player.cpp",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAGAAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-06T11:08:01.699Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T11:08:01.699Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Player.h",
               "DocumentMoniker": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\Player.h",
               "RelativeDocumentMoniker": "MelonSoda\\Player.h",
@@ -140,8 +134,7 @@
               "RelativeToolTip": "MelonSoda\\Player.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-06T11:07:56.27Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T11:07:56.27Z"
             },
             {
               "$type": "Document",
@@ -149,16 +142,16 @@
               "Title": "Battle.cpp",
               "DocumentMoniker": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\Battle.cpp",
               "RelativeDocumentMoniker": "MelonSoda\\Battle.cpp",
-              "ToolTip": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\Battle.cpp*",
-              "RelativeToolTip": "MelonSoda\\Battle.cpp*",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAAAKoAAAAJAAAAAAAAAA==",
+              "ToolTip": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\Battle.cpp",
+              "RelativeToolTip": "MelonSoda\\Battle.cpp",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAAQAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-06T11:08:22.609Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Battle.h",
               "DocumentMoniker": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\Battle.h",
               "RelativeDocumentMoniker": "MelonSoda\\Battle.h",

@@ -2,21 +2,21 @@
 
 void Battle(Player& player, Monster& monster)
 {
-	std::cout << monster.name << "ì´(ê°€) ë‚˜íƒ€ë‚¬ë‹¤!" << std::endl;
+	std::cout << monster.name << "ÀÌ(°¡) ³ªÅ¸³µ´Ù!" << std::endl;
 	while ((player.HP > 0) && (monster.HP > 0)) {
-		std::cout << player.name << "ì˜ ì°¨ë¡€!" << std::endl;
+		std::cout << player.name << "ÀÇ Â÷·Ê!" << std::endl;
 		int playerSelect = 0;
-		int monsterSelect = 0;		//ëª¬ìŠ¤í„° ai êµ¬í˜„ìš©
+		int monsterSelect = 0;		//¸ó½ºÅÍ ai ±¸Çö¿ë
 		while (1) {
-			std::cout << "ë¬´ì—‡ì„ í• ê¹Œ?" << std::endl;
-			std::cout << "1. ê³µê²© 2. ìŠ¤í‚¬ 3. ìŠ¤íƒ¯í™•ì¸" << std::endl;
+			std::cout << "¹«¾ùÀ» ÇÒ±î?" << std::endl;
+			std::cout << "1. °ø°İ 2. ½ºÅ³ 3. ½ºÅÈÈ®ÀÎ" << std::endl;
 			std::cin >> playerSelect;
 			if (playerSelect == 1) {
 				monster.HP -= dmg(player, monster);
 				break;
 			}
 			else if (playerSelect == 2) {
-				std::cout << "ìŠ¤í‚¬ì€ ì•„ì§ ë¯¸êµ¬í˜„ì´ì§€ë¹„" << std::endl;
+				std::cout << "½ºÅ³Àº ¾ÆÁ÷ ¹Ì±¸ÇöÀÌÁöºñ" << std::endl;
 			}
 			else if (playerSelect == 3) {
 				player.showPStat();
@@ -29,16 +29,16 @@ void Battle(Player& player, Monster& monster)
 			continue;
 		}
 
-		std::cout << "ìƒëŒ€ " << monster.name << "ì˜ ì°¨ë¡€!" << std::endl;
+		std::cout << "»ó´ë " << monster.name << "ÀÇ Â÷·Ê!" << std::endl;
 		while (1) {
 			monsterSelect = 1;
 			if (monsterSelect == 1) {
-				std::cout << "ìƒëŒ€ " << monster.name << "ì˜ ê³µê²©!" << std::endl;
+				std::cout << "»ó´ë " << monster.name << "ÀÇ °ø°İ!" << std::endl;
 				player.HP -= dmg(monster, player);
 				break;
 			}
 			else if (monsterSelect == 2) {
-				std::cout << "ìŠ¤í‚¬ì€ ì•„ì§ ë¯¸êµ¬í˜„ì´ì§€ë¹„" << std::endl;
+				std::cout << "½ºÅ³Àº ¾ÆÁ÷ ¹Ì±¸ÇöÀÌÁöºñ" << std::endl;
 			}
 			else {
 				continue;
@@ -46,7 +46,7 @@ void Battle(Player& player, Monster& monster)
 		}
 	}
 	if (player.HP > monster.HP) {
-		std::cout << monster.name << "ìœ¼ë¡œ ë¶€í„° ìŠ¹ë¦¬í–ˆë‹¤!" << std::endl;
+		std::cout << monster.name << "À¸·Î ºÎÅÍ ½Â¸®Çß´Ù!" << std::endl;
 		Sleep(1000);
 		Event(player, monster);
 	}
@@ -56,129 +56,129 @@ int dmg(Actor attacker, Actor defender)
 {
 	int dmg = 0;
 	dmg = (attacker.ATK * 100) / (defender.DEF + 100);
-	std::cout << attacker.name << "ì´(ê°€) " << defender.name << "ì—ê²Œ " << dmg << "ë§Œí¼ì˜ í”¼í•´ë¥¼ ì…í˜”ë‹¤!" << std::endl;
+	std::cout << attacker.name << "ÀÌ(°¡) " << defender.name << "¿¡°Ô " << dmg << "¸¸Å­ÀÇ ÇÇÇØ¸¦ ÀÔÇû´Ù!" << std::endl;
 	return dmg;
 }
 
 void Event(Player& player, Monster& monster)
 {
-	std::cout << "ì´ë²¤íŠ¸ ì‹œì‘!" << std::endl;
+	std::cout << "ÀÌº¥Æ® ½ÃÀÛ!" << std::endl;
 	int playerSelect = 0;
 	switch (monster.Event_index) {
-	case 1:		//ë¹µë¶€ìŠ¤ëŸ¬ê¸°
-		std::cout << "Event 1 <ì›¬ ë¹µë¶€ìŠ¤ëŸ¬ê¸°?>\në­ì•¼? ì™œ ì—¬ê¸°ì— ëŠë‹·ì—†ì´ ë¹µ ë¶€ìŠ¤ëŸ¬ê¸°ê°€ í¼ì§í¼ì§í•˜ê²Œ ë–¨ì–´ì ¸ ìˆëƒ?? ê°€ë³¼ê¹Œ?\n" << std::endl;
-		std::cout << "1.ê·¸ë˜ | 2. ë†‰ ë¯¸ì³¤ì–´? ì´ëŸ° ê³³ì— ìˆëŠ” ê±¸?\n" << std::endl;
+	case 1:		//»§ºÎ½º·¯±â
+		std::cout << "Event 1 <À¢ »§ºÎ½º·¯±â?>\n¹¹¾ß? ¿Ö ¿©±â¿¡ ´À´å¾øÀÌ »§ ºÎ½º·¯±â°¡ Å­Á÷Å­Á÷ÇÏ°Ô ¶³¾îÁ® ÀÖ³Ä?? °¡º¼±î?\n" << std::endl;
+		std::cout << "1.±×·¡ | 2. ³ñ ¹ÌÃÆ¾î? ÀÌ·± °÷¿¡ ÀÖ´Â °É?\n" << std::endl;
 		std::cin >> playerSelect;
 		if (playerSelect == 1) {
-			std::cout << "ìš©ì‚¬ : ì´ëŸ° ê³³ì— ìˆìœ¼ë©´ ë¹µì´ ë¶ˆìŒ...? ë­ì•¼ ì´ê±´... ì˜¤ë Œì§€?(ì˜¤ëœì§€ íšë“)\n" << std::endl;
+			std::cout << "¿ë»ç : ÀÌ·± °÷¿¡ ÀÖÀ¸¸é »§ÀÌ ºÒ½Ö...? ¹¹¾ß ÀÌ°Ç... ¿À·»Áö?(¿À·£Áö È¹µæ)\n" << std::endl;
 			player.addInventory(apple);
-			std::cout << "ì ê¹ ì‰¬ë‹ˆê¹Œ ëª¸ì´ ì¢€ íšŒë³µ ë˜ëŠ”êµ¬ë§Œ.. ê°€ë³¼ê¹Œ?" << std::endl;
+			std::cout << "Àá±ñ ½¬´Ï±î ¸öÀÌ Á» È¸º¹ µÇ´Â±¸¸¸.. °¡º¼±î?" << std::endl;
 			int heal = rand() % 5 + 1;
 			player.HP += heal;
-			std::cout << "í”Œë ˆì´ì–´ì˜ HP : " << heal << " ë§Œí¼ íšŒë³µ!" << std::endl;
+			std::cout << "ÇÃ·¹ÀÌ¾îÀÇ HP : " << heal << " ¸¸Å­ È¸º¹!" << std::endl;
 
 		}
 		else if (playerSelect == 2) {
-			std::cout << "ìš©ì‚¬ : ì•„ë‹ˆì•„ë‹ˆ ìƒì‹ì ìœ¼ë¡œ ì´ë ‡ê²Œ ê¹¨ë—í•œ ê³³ì— ë¶€ìŠ¤ëŸ¬ê¸°ê°€ ë–¨ì–´ì ¸ ìˆì„ë¦¬ê°€ ì—†ì–ì•„....?" << std::endl;
-			std::cout << "       ë¬´ì‹œí•˜ê³  ê°€ã„¹..? ë­ëƒ ë„Œ..?" << std::endl;
-			std::cout << "ìœ ë ¹ : (ì•„ë¬´ ë§ ì—†ì´ ìš©ì‚¬ì˜ ì†ì„ ê¼­ ì¡ê³  ë¬´ì–¸ê°€ë¥¼ ì¥ì—¬ì¤€ë‹¤)" << std::endl;
-			std::cout << "ìš©ì‚¬ : ì‚¬ê³¼...? (ì‚¬ê³¼ íšë“)" << std::endl;
+			std::cout << "¿ë»ç : ¾Æ´Ï¾Æ´Ï »ó½ÄÀûÀ¸·Î ÀÌ·¸°Ô ±ú²ıÇÑ °÷¿¡ ºÎ½º·¯±â°¡ ¶³¾îÁ® ÀÖÀ»¸®°¡ ¾øÀİ¾Æ....?" << std::endl;
+			std::cout << "       ¹«½ÃÇÏ°í °¡¤©..? ¹¹³Ä ³Í..?" << std::endl;
+			std::cout << "À¯·É : (¾Æ¹« ¸» ¾øÀÌ ¿ë»çÀÇ ¼ÕÀ» ²À Àâ°í ¹«¾ğ°¡¸¦ Áã¿©ÁØ´Ù)" << std::endl;
+			std::cout << "¿ë»ç : »ç°ú...? (»ç°ú È¹µæ)" << std::endl;
 
 			player.addInventory(orange);
-			std::cout << "ì ê¹ ì‰¬ë‹ˆê¹Œ ëª¸ì´ ì¢€ íšŒë³µ ë˜ëŠ”êµ¬ë§Œ.. ê°€ë³¼ê¹Œ?" << std::endl;
+			std::cout << "Àá±ñ ½¬´Ï±î ¸öÀÌ Á» È¸º¹ µÇ´Â±¸¸¸.. °¡º¼±î?" << std::endl;
 			int heal = rand() % 5 + 1;
 			player.HP += heal;
-			std::cout << "í”Œë ˆì´ì–´ì˜ HP : " << heal << " ë§Œí¼ íšŒë³µ!" << std::endl;
+			std::cout << "ÇÃ·¹ÀÌ¾îÀÇ HP : " << heal << " ¸¸Å­ È¸º¹!" << std::endl;
 		}
 		break;
-	case 2:		//ìŠ¬ë¼ì„
-		std::cout << "Event 2 <ìƒê°ë³´ë‹¤ ê·€ì—¬ìš´ ìŠ¬ë¼ì„>\nì—¬ê¸´ ì™œ ìŠ¬ë¼ì„ë§Œ ìˆëŠ”ê±°ì•¼? ìŠ¬ë¼ì„ ë†ì‚¬ë¼ë„ ì§“ëŠ”ê±°ëƒê³ \nìŒ? ì € ìŠ¬ë¼ì„ì€ ì¢€ íŠ¹ì´í•œë° ê°€ë³¼ê¹Œ??\n" << std::endl;
-		std::cout << "1. ê·¸ë˜ ê°€ë³´ì | 2. ì•„ë‹ˆì•„ë‹ˆ ë¨¹í ì¼ ìˆì–´??" << std::endl;
+	case 2:		//½½¶óÀÓ
+		std::cout << "Event 2 <»ı°¢º¸´Ù ±Í¿©¿î ½½¶óÀÓ>\n¿©±ä ¿Ö ½½¶óÀÓ¸¸ ÀÖ´Â°Å¾ß? ½½¶óÀÓ ³ó»ç¶óµµ Áş´Â°Å³Ä°í\nÀ½? Àú ½½¶óÀÓÀº Á» Æ¯ÀÌÇÑµ¥ °¡º¼±î??\n" << std::endl;
+		std::cout << "1. ±×·¡ °¡º¸ÀÚ | 2. ¾Æ´Ï¾Æ´Ï ¸ÔÈú ÀÏ ÀÖ¾î??" << std::endl;
 		std::cin >> playerSelect;
 		if (playerSelect == 1) {
-			std::cout << "ìš©ì‚¬ : ìœ¼ì™“!(ì†ì„ í™©ê¸‰íˆ ë¹¼ë©°) ë­ ì´ë¦¬ ëœ¨ê²ëƒ?" << std::endl;
-			std::cout << "ìŠ¬ë¼ì„ : (ë¯¸ì•ˆí•œì§€ ë¬´ì–¸ê°€ë¥¼ ë±‰ì–´ë‚¸ë‹¤)" << std::endl;
-			std::cout << "ìš©ì‚¬ : ì‘? ì„ ë¬¼ì´ì•¼? í¬ë„..? ë­ì§€ ì—¬ê¸´ ê³¼ì¼ ì¬ë°°ì§€ì¸ê°€?" << std::endl;
-			std::cout << "        ì–˜ëŠ” ì™œ ì°¨ê°€ìš´ê±°ì•¼?(í¬ë„ íšë“)" << std::endl;
+			std::cout << "¿ë»ç : À¸¿Ó!(¼ÕÀ» È²±ŞÈ÷ »©¸ç) ¹¹ ÀÌ¸® ¶ß°Ì³Ä?" << std::endl;
+			std::cout << "½½¶óÀÓ : (¹Ì¾ÈÇÑÁö ¹«¾ğ°¡¸¦ ¹ñ¾î³½´Ù)" << std::endl;
+			std::cout << "¿ë»ç : ÀÀ? ¼±¹°ÀÌ¾ß? Æ÷µµ..? ¹¹Áö ¿©±ä °úÀÏ Àç¹èÁöÀÎ°¡?" << std::endl;
+			std::cout << "        ¾ê´Â ¿Ö Â÷°¡¿î°Å¾ß?(Æ÷µµ È¹µæ)" << std::endl;
 
 			player.addInventory(grape);
-			std::cout << "ì ê¹ ì‰¬ë‹ˆê¹Œ ëª¸ì´ ì¢€ íšŒë³µ ë˜ëŠ”êµ¬ë§Œ.. ê°€ë³¼ê¹Œ?" << std::endl;
+			std::cout << "Àá±ñ ½¬´Ï±î ¸öÀÌ Á» È¸º¹ µÇ´Â±¸¸¸.. °¡º¼±î?" << std::endl;
 			int heal = rand() % 5 + 1;
 			player.HP += heal;
-			std::cout << "í”Œë ˆì´ì–´ì˜ HP : " << heal << " ë§Œí¼ íšŒë³µ!" << std::endl;
+			std::cout << "ÇÃ·¹ÀÌ¾îÀÇ HP : " << heal << " ¸¸Å­ È¸º¹!" << std::endl;
 		}
 		else if (playerSelect == 2) {
-			std::cout << "ìš©ì‚¬ : ì•„ë‹ˆ ì•ˆê·¸ë˜ë„ ëª¬ìŠ¤í„°ì¸ë° ìŸ¤ ë­”ê°€ ë¨¹ê³  ìˆë‹¤ê³ .. ê·¸ë¦¬ê³  ë¬´ì„­ê²Œ ëœ¨ê±°ì›Œ! ë‚˜ëŠ” ìŸ¤ ë¨¹ì´ê°€ ë˜ê¸° ì‹«ì–´!" << std::endl;
-			std::cout << "ìš©ì‚¬ëŠ” í™©ê¸‰íˆ ìë¦¬ë¥¼ ëœ¬ë‹¤." << std::endl;
-			std::cout << "ë‹¤ìŒ ë°©ìœ¼ë¡œ ê°€ë˜ ì¤‘ ë¬´ì–¸ê°€ê°€ í•˜ëŠ˜ì—ì„œ ë–¨ì–´ì§„ë‹¤." << std::endl;
-			std::cout << "ìš©ì‚¬ : ì•„ì–! ëˆ„êµ¬ì•¼? ì•„ë³´ì¹´..ë„..?(ì•„ë³´ì¹´ë„ íšë“!)" << std::endl;
+			std::cout << "¿ë»ç : ¾Æ´Ï ¾È±×·¡µµ ¸ó½ºÅÍÀÎµ¥ À÷ ¹º°¡ ¸Ô°í ÀÖ´Ù°í.. ±×¸®°í ¹«¼·°Ô ¶ß°Å¿ö! ³ª´Â À÷ ¸ÔÀÌ°¡ µÇ±â ½È¾î!" << std::endl;
+			std::cout << "¿ë»ç´Â È²±ŞÈ÷ ÀÚ¸®¸¦ ¶á´Ù." << std::endl;
+			std::cout << "´ÙÀ½ ¹æÀ¸·Î °¡´ø Áß ¹«¾ğ°¡°¡ ÇÏ´Ã¿¡¼­ ¶³¾îÁø´Ù." << std::endl;
+			std::cout << "¿ë»ç : ¾Æ¾æ! ´©±¸¾ß? ¾Æº¸Ä«..µµ..?(¾Æº¸Ä«µµ È¹µæ!)" << std::endl;
 
 			player.addInventory(avocado);
-			std::cout << "ì ê¹ ì‰¬ë‹ˆê¹Œ ëª¸ì´ ì¢€ íšŒë³µ ë˜ëŠ”êµ¬ë§Œ.. ê°€ë³¼ê¹Œ?" << std::endl;
+			std::cout << "Àá±ñ ½¬´Ï±î ¸öÀÌ Á» È¸º¹ µÇ´Â±¸¸¸.. °¡º¼±î?" << std::endl;
 			int heal = rand() % 5 + 1;
 			player.HP += heal;
-			std::cout << "í”Œë ˆì´ì–´ì˜ HP : " << heal << " ë§Œí¼ íšŒë³µ!" << std::endl;
+			std::cout << "ÇÃ·¹ÀÌ¾îÀÇ HP : " << heal << " ¸¸Å­ È¸º¹!" << std::endl;
 		}
 		break;
-	case 3:		//ì£¼ì‚¬ê¸°
-		std::cout << "Event 3 <ì˜ë¬¸ì˜ ì£¼ì‚¬ê¸°>\nì´ê±´ ë˜ ë­ì•¼? ë–¡í•˜ë‹ˆ ì£¼ì‚¬ê¸°ê°€ ì € ì¨ì£¼ì„¸ìš”í•˜ëŠ”ë°? ì–´ì©”ê¹Œ?\n" << std::endl;
-		std::cout << "1. ì§±ì§± ì„¸ì§€ëŠ” ê²ƒ ê°™ì€ë° ì§€ê¸ˆ ë‹¹ì¥í•˜ì. 2. ì´ëŸ° ê³³ì— ìˆëŠ” ì£¼ì‚¬ê¸°ë¼ê³ ? ë‹¹ì—°íˆ ì•ˆë˜ì§€\n" << std::endl;
+	case 3:		//ÁÖ»ç±â
+		std::cout << "Event 3 <ÀÇ¹®ÀÇ ÁÖ»ç±â>\nÀÌ°Ç ¶Ç ¹¹¾ß? ¶±ÇÏ´Ï ÁÖ»ç±â°¡ Àú ½áÁÖ¼¼¿äÇÏ´Âµ¥? ¾îÂ¿±î?\n" << std::endl;
+		std::cout << "1. Â¯Â¯ ¼¼Áö´Â °Í °°Àºµ¥ Áö±İ ´çÀåÇÏÀÚ. 2. ÀÌ·± °÷¿¡ ÀÖ´Â ÁÖ»ç±â¶ó°í? ´ç¿¬È÷ ¾ÈµÇÁö\n" << std::endl;
 		std::cin >> playerSelect;
 		if (playerSelect == 1) {
-			std::cout << "ìš©ì‚¬ : (ì£¼ì‚¬í•œ ê³³ì„ ëˆ„ë¥´ë©°)ì˜¤! ì´ê±° ì¢‹ì€ë°? ë©œë¡  ì†Œë‹¤ë¥¼ ë¨¹ì€ ëŠë‚Œì´ì—ˆì–´!" << std::endl;
-			std::cout << "       (ì£¼ì‚¬ê¸°ê°€ ë“¤ì–´ìˆë˜ ìƒìì— ì†ì„ ë„£ìœ¼ë©°) ë˜ ë­”ê°€ ìˆëŠ”ë°? í•˜... ì´ë²ˆì—” ì˜¤ë Œì§€ëƒ...." << std::endl;
+			std::cout << "¿ë»ç : (ÁÖ»çÇÑ °÷À» ´©¸£¸ç)¿À! ÀÌ°Å ÁÁÀºµ¥? ¸á·Ğ ¼Ò´Ù¸¦ ¸ÔÀº ´À³¦ÀÌ¾ú¾î!" << std::endl;
+			std::cout << "       (ÁÖ»ç±â°¡ µé¾îÀÖ´ø »óÀÚ¿¡ ¼ÕÀ» ³ÖÀ¸¸ç) ¶Ç ¹º°¡ ÀÖ´Âµ¥? ÇÏ... ÀÌ¹ø¿£ ¿À·»Áö³Ä...." << std::endl;
 
 			player.addInventory(orange);
-			std::cout << "ì ê¹ ì‰¬ë‹ˆê¹Œ ëª¸ì´ ì¢€ íšŒë³µ ë˜ëŠ”êµ¬ë§Œ.. ê°€ë³¼ê¹Œ?" << std::endl;
+			std::cout << "Àá±ñ ½¬´Ï±î ¸öÀÌ Á» È¸º¹ µÇ´Â±¸¸¸.. °¡º¼±î?" << std::endl;
 			int heal = rand() % 5 + 1;
 			player.HP += heal;
-			std::cout << "í”Œë ˆì´ì–´ì˜ HP : " << heal << " ë§Œí¼ íšŒë³µ!" << std::endl;
+			std::cout << "ÇÃ·¹ÀÌ¾îÀÇ HP : " << heal << " ¸¸Å­ È¸º¹!" << std::endl;
 		}
 		else if (playerSelect == 2) {
-			std::cout << "ì € ë©€ë¦¬ì—ì„œ ë¬´ì–¸ê°€ê°€ ì´ì´í•˜ê³  ë›°ì–´ì˜¨ë‹¤." << std::endl;
-			std::cout << "ìš©ì‚¬ : ëˆ„ã„±.. ì–´ ìŠ¬ë¼ì„ ë˜ ë„ˆëƒ? ë‚˜ ë§›ì—†ì–´" << std::endl;
-			std::cout << "       ì‘? ì´ê±¸ ë˜ ë‚˜í•œí…Œ ì¤€ë‹¤ê³ ? ë„ˆëŠ” ëª¸ì€ ìš©ê´‘ë¡œì¸ë° ë‚´ë±‰ëŠ” ê²ƒë“¤ì€ ì™œ ì°¨ê°‘ëƒ?" << std::endl;
-			std::cout << "       (ë±‰ì€ ê³³ì— ë‹¤ê°€ê°€ë©°)ì´ë²ˆì—” ë­˜ ì£¼ë‚˜? ìŒ ìˆ˜ë°•ì´ë„¤... (ì›ƒìœ¼ë©°)ì–¸ëŸ­í‚¤ ë©œë¡ ~!" << std::endl;
+			std::cout << "Àú ¸Ö¸®¿¡¼­ ¹«¾ğ°¡°¡ ÃÑÃÑÇÏ°í ¶Ù¾î¿Â´Ù." << std::endl;
+			std::cout << "¿ë»ç : ´©¤¡.. ¾î ½½¶óÀÓ ¶Ç ³Ê³Ä? ³ª ¸À¾ø¾î" << std::endl;
+			std::cout << "       ÀÀ? ÀÌ°É ¶Ç ³ªÇÑÅ× ÁØ´Ù°í? ³Ê´Â ¸öÀº ¿ë±¤·ÎÀÎµ¥ ³»¹ñ´Â °ÍµéÀº ¿Ö Â÷°©³Ä?" << std::endl;
+			std::cout << "       (¹ñÀº °÷¿¡ ´Ù°¡°¡¸ç)ÀÌ¹ø¿£ ¹» ÁÖ³ª? À½ ¼ö¹ÚÀÌ³×... (¿ôÀ¸¸ç)¾ğ·°Å° ¸á·Ğ~!" << std::endl;
 
 			player.addInventory(watermelon);
-			std::cout << "ì ê¹ ì‰¬ë‹ˆê¹Œ ëª¸ì´ ì¢€ íšŒë³µ ë˜ëŠ”êµ¬ë§Œ.. ê°€ë³¼ê¹Œ?" << std::endl;
+			std::cout << "Àá±ñ ½¬´Ï±î ¸öÀÌ Á» È¸º¹ µÇ´Â±¸¸¸.. °¡º¼±î?" << std::endl;
 			int heal = rand() % 5 + 1;
 			player.HP += heal;
-			std::cout << "í”Œë ˆì´ì–´ì˜ HP : " << heal << " ë§Œí¼ íšŒë³µ!" << std::endl;
+			std::cout << "ÇÃ·¹ÀÌ¾îÀÇ HP : " << heal << " ¸¸Å­ È¸º¹!" << std::endl;
 		}
 		break;
-	case 4:		//ì‹¤í—˜ì²´
-		std::cout << "Event 4 <ë„ˆë„ ì‹¤í—˜ì²´?>\nìš©ì‚¬ : í”¼ë¡œí•˜êµ¬ë§Œ ì˜ˆì „ê°™ì§€ ì•Šê²Œ ëª¸ì´ ë§ì´ ë‘”í•´ì§„ ê²ƒ ê°™ì•„..\në’¤ì—ì„œ ë¬´ìŠ¨ ì†Œë¦¬ê°€ ë“¤ë ¤ ëŒì•„ë³¸ë‹¤\nXX : ì‚£ì‚ì‚£ì‚!\nìš©ì‚¬ : ë§ì´ í”¼ê³¤í•œê°€ë´.... ë³„ ì´ìƒí•œ ì†Œë¦¬ê°€ ë“¤ë¦¬ë„¤\nìŒ... ì§‘ì—ì„œ ë§ˆë²•ì„œ ê°€ì ¸ì˜¤ê¸´ í–ˆëŠ”ë° í•´ì„í•´ë³¼ê¹Œ?\n" << std::endl;
-		std::cout << "1. ë¬´ìŠ¨ ë§ í• ì§€ ê¸°ëŒ€ê°€ ëœë‹¤ 2. ë³„ ì¤‘ìš”í•œ ì–˜ê¸°ë„ ì•„ë‹ˆê² ì§€ ì¹¼ì„ ë½‘ëŠ”ë‹¤\n" << std::endl;
+	case 4:		//½ÇÇèÃ¼
+		std::cout << "Event 4 <³Êµµ ½ÇÇèÃ¼?>\n¿ë»ç : ÇÇ·ÎÇÏ±¸¸¸ ¿¹Àü°°Áö ¾Ê°Ô ¸öÀÌ ¸¹ÀÌ µĞÇØÁø °Í °°¾Æ..\nµÚ¿¡¼­ ¹«½¼ ¼Ò¸®°¡ µé·Á µ¹¾Æº»´Ù\nXX : »å»ß»å»ß!\n¿ë»ç : ¸¹ÀÌ ÇÇ°ïÇÑ°¡ºÁ.... º° ÀÌ»óÇÑ ¼Ò¸®°¡ µé¸®³×\nÀ½... Áı¿¡¼­ ¸¶¹ı¼­ °¡Á®¿À±ä Çß´Âµ¥ ÇØ¼®ÇØº¼±î?\n" << std::endl;
+		std::cout << "1. ¹«½¼ ¸» ÇÒÁö ±â´ë°¡ µÈ´Ù 2. º° Áß¿äÇÑ ¾ê±âµµ ¾Æ´Ï°ÚÁö Ä®À» »Ì´Â´Ù\n" << std::endl;
 		std::cin >> playerSelect;
 		if (playerSelect == 1) {
-			std::cout << "XX : ì‚£ì‚ì‚£ì‚!" << std::endl;
-			std::cout << "ìš©ì‚¬ : ë­ì•¼? ì§„ì§œ ì‚£ì‚ì‚£ì‚ë¼ê³  ë§í•œê±°ì˜€ì–ì•„!" << std::endl;
-			std::cout << "XXëŠ” ë‹¤ê°€ì˜¤ë”ë‹ˆ ì•ì— ë¬´ì–¸ê°€ë¥¼ ë‚´ë ¤ë†“ì•˜ë‹¤." << std::endl;
-			std::cout << "ìš©ì‚¬ : í•˜í•˜í•˜... ì—¬ê¸°ëŠ” ë¯¸ì³¤ì–´... ë˜ ê³¼ì¼ì´ì•¼..." << std::endl;
-			std::cout << "       ê·¸ë˜ê·¸ë˜... ê³ ë§™ë‹¤.... (ì˜¤ë Œì§€ íšë“)" << std::endl;
+			std::cout << "XX : »å»ß»å»ß!" << std::endl;
+			std::cout << "¿ë»ç : ¹¹¾ß? ÁøÂ¥ »å»ß»å»ß¶ó°í ¸»ÇÑ°Å¿´Àİ¾Æ!" << std::endl;
+			std::cout << "XX´Â ´Ù°¡¿À´õ´Ï ¾Õ¿¡ ¹«¾ğ°¡¸¦ ³»·Á³õ¾Ò´Ù." << std::endl;
+			std::cout << "¿ë»ç : ÇÏÇÏÇÏ... ¿©±â´Â ¹ÌÃÆ¾î... ¶Ç °úÀÏÀÌ¾ß..." << std::endl;
+			std::cout << "       ±×·¡±×·¡... °í¸¿´Ù.... (¿À·»Áö È¹µæ)" << std::endl;
 
 			player.addInventory(orange);
-			std::cout << "ì ê¹ ì‰¬ë‹ˆê¹Œ ëª¸ì´ ì¢€ íšŒë³µ ë˜ëŠ”êµ¬ë§Œ.. ê°€ë³¼ê¹Œ?" << std::endl;
+			std::cout << "Àá±ñ ½¬´Ï±î ¸öÀÌ Á» È¸º¹ µÇ´Â±¸¸¸.. °¡º¼±î?" << std::endl;
 			int heal = rand() % 5 + 1;
 			player.HP += heal;
-			std::cout << "í”Œë ˆì´ì–´ì˜ HP : " << heal << " ë§Œí¼ íšŒë³µ!" << std::endl;
+			std::cout << "ÇÃ·¹ÀÌ¾îÀÇ HP : " << heal << " ¸¸Å­ È¸º¹!" << std::endl;
 		}
 		else if (playerSelect == 2) {
-			std::cout << "ìš©ì‚¬ : ë­ë¼ëŠ”ì§€ í•˜ë‚˜ë„ ëª¨ë¥´ê² ì–´! ì£½xì–´!" << std::endl;
-			std::cout << "ë°˜ì§ë°˜ì§ê±°ë¦¬ëŠ” ë¬´ì–¸ê°€ê°€ ë–¨ì–´ì¡Œë‹¤." << std::endl;
-			std::cout << "ìš©ì‚¬ : ê·¸ë˜ê·¸ë˜ ì´ê²ƒë„ ê³¼ì¼ì´ë„¤ ì™„ì „íˆ ê¹¨ë‹¬ì•˜ì–´! ì—¬ê¸°ëŠ” ë¯¸ì¹œ ê³³ì´ì•¼!(ìëª½íšë“)" << std::endl;
+			std::cout << "¿ë»ç : ¹¹¶ó´ÂÁö ÇÏ³ªµµ ¸ğ¸£°Ú¾î! Á×x¾î!" << std::endl;
+			std::cout << "¹İÂ¦¹İÂ¦°Å¸®´Â ¹«¾ğ°¡°¡ ¶³¾îÁ³´Ù." << std::endl;
+			std::cout << "¿ë»ç : ±×·¡±×·¡ ÀÌ°Íµµ °úÀÏÀÌ³× ¿ÏÀüÈ÷ ±ú´Ş¾Ò¾î! ¿©±â´Â ¹ÌÄ£ °÷ÀÌ¾ß!(ÀÚ¸ùÈ¹µæ)" << std::endl;
 
 			player.addInventory(grapefruit);
-			std::cout << "ì ê¹ ì‰¬ë‹ˆê¹Œ ëª¸ì´ ì¢€ íšŒë³µ ë˜ëŠ”êµ¬ë§Œ.. ê°€ë³¼ê¹Œ?" << std::endl;
+			std::cout << "Àá±ñ ½¬´Ï±î ¸öÀÌ Á» È¸º¹ µÇ´Â±¸¸¸.. °¡º¼±î?" << std::endl;
 			int heal = rand() % 5 + 1;
 			player.HP += heal;
-			std::cout << "í”Œë ˆì´ì–´ì˜ HP : " << heal << " ë§Œí¼ íšŒë³µ!" << std::endl;
+			std::cout << "ÇÃ·¹ÀÌ¾îÀÇ HP : " << heal << " ¸¸Å­ È¸º¹!" << std::endl;
 		}
 		break;
-	case 5:		//ë³´ìŠ¤ ì§„ì…
-		std::cout << "Event BOSS<ëˆ„êµ°ê°€ì—ê² 'ì°¸'ì´ ë  ì´ì•¼ê¸°>\në§ˆë…€(???) : ë„ˆ ì§„ì§œ ê³„ì† ê·¸ë ‡ê²Œ í—¤ì§‘ê³  ë‹¤ë‹êº¼ì•¼?\n           í•˜... ëª°ë¼ ë¤ë²¼\n" << std::endl;
-		std::cout << "ì¤€ë¹„ë¥¼ í•´ì•¼í•  ê²ƒ ê°™ë‹¤. ì¹¼ì„ ì„œì„œíˆ êº¼ë‚¸ë‹¤." << std::endl;
+	case 5:		//º¸½º ÁøÀÔ
+		std::cout << "Event BOSS<´©±º°¡¿¡°Õ 'Âü'ÀÌ µÉ ÀÌ¾ß±â>\n¸¶³à(???) : ³Ê ÁøÂ¥ °è¼Ó ±×·¸°Ô ÇìÁı°í ´Ù´Ò²¨¾ß?\n           ÇÏ... ¸ô¶ó ´ıº­\n" << std::endl;
+		std::cout << "ÁØºñ¸¦ ÇØ¾ßÇÒ °Í °°´Ù. Ä®À» ¼­¼­È÷ ²¨³½´Ù." << std::endl;
 		break;
 	default:
 		break;
@@ -188,14 +188,14 @@ void Event(Player& player, Monster& monster)
 
 void afterBattle(Player& player)
 {
-	std::cout << "ë‹¤ìŒ ì¸µìœ¼ë¡œ ì˜¬ë¼ê°€ëŠ” ê³„ë‹¨ì´ ë³´ì¸ë‹¤!" << std::endl;
+	std::cout << "´ÙÀ½ ÃşÀ¸·Î ¿Ã¶ó°¡´Â °è´ÜÀÌ º¸ÀÎ´Ù!" << std::endl;
 	int playerSelect = 0;
 	
 	while (1) {
-		std::cout << "1. ì˜¬ë¼ê°„ë‹¤ 2. ì£¼ë¨¸ë‹ˆë¥¼ í™•ì¸í•œë‹¤ 3.ìŒë£Œìˆ˜ë¥¼ ë§Œë“ ë‹¤ 4. ìŠ¤íƒ¯ì„ í™•ì¸í•œë‹¤" << std::endl;
+		std::cout << "1. ¿Ã¶ó°£´Ù 2. ÁÖ¸Ó´Ï¸¦ È®ÀÎÇÑ´Ù 3.À½·á¼ö¸¦ ¸¸µç´Ù 4. ½ºÅÈÀ» È®ÀÎÇÑ´Ù" << std::endl;
 		std::cin >> playerSelect;
 		if (playerSelect == 1) {
-			std::cout << player.name << "ì€(ëŠ”) ë§ˆìŒì„ ê°€ë‹¤ë“¬ê³  ë‹¤ìŒ ì¸µìœ¼ë¡œ í–¥í–ˆë‹¤." << std::endl;
+			std::cout << player.name << "Àº(´Â) ¸¶À½À» °¡´Ùµë°í ´ÙÀ½ ÃşÀ¸·Î ÇâÇß´Ù." << std::endl;
 			Sleep(1000);
 			break;
 		}
@@ -203,28 +203,28 @@ void afterBattle(Player& player)
 			player.showInventory();
 		}
 		else if (playerSelect == 3) {
-			std::cout << "blend systemì€ ì•„ì§ ë¯¸êµ¬í˜„ì´ì§€ë¹„" << std::endl;
+			std::cout << "blend systemÀº ¾ÆÁ÷ ¹Ì±¸ÇöÀÌÁöºñ" << std::endl;
 			int fruitSelect1 = 0;
 			int fruitSelect2 = 0;
-			std::cout << "ë¬´ìŠ¨ ê³¼ì¼ë¡œ ë§Œë“¤ê¹Œ?" << std::endl;
+			std::cout << "¹«½¼ °úÀÏ·Î ¸¸µé±î?" << std::endl;
 			player.showInventory();
 			//std::cout << player.fruit_inventory.size() << std::endl;
 			std::cin >> fruitSelect1;
 			if (fruitSelect1 > player.fruit_inventory.size()) {
-				std::cout << "ê°€ì§€ê³  ìˆì§€ ì•ŠëŠ” ê²ƒ ê°™ë‹¤..." << std::endl;
+				std::cout << "°¡Áö°í ÀÖÁö ¾Ê´Â °Í °°´Ù..." << std::endl;
 				continue;
 			}
 			std::cin >> fruitSelect2;
 			if (fruitSelect1 == fruitSelect2) {
-				std::cout << "ì´ë¯¸ ì„ íƒí•œ ê³¼ì¼ì´ë‹¤..." << std::endl;
+				std::cout << "ÀÌ¹Ì ¼±ÅÃÇÑ °úÀÏÀÌ´Ù..." << std::endl;
 				continue;
 			}
 			if (fruitSelect2 > player.fruit_inventory.size()) {
-				std::cout << "ê°€ì§€ê³  ìˆì§€ ì•ŠëŠ” ê²ƒ ê°™ë‹¤..." << std::endl;
+				std::cout << "°¡Áö°í ÀÖÁö ¾Ê´Â °Í °°´Ù..." << std::endl;
 				continue;
 			}
-			std::cout << player.fruit_inventory[fruitSelect1 - 1].name << "ì™€(ê³¼)" << player.fruit_inventory[fruitSelect2 - 1].name << "ì„(ë¥¼) ì‚¬ìš©í•´ì„œ ìŒë£Œë¥¼ ë§Œë“¤ê¹Œ?" << std::endl;
-			std::cout << "1. ë‹¹ì¥ ë§Œë“¤ì! 2. ë‹¤ì‹œ ìƒê°í•´ë³´ì" << std::endl;
+			std::cout << player.fruit_inventory[fruitSelect1 - 1].name << "¿Í(°ú)" << player.fruit_inventory[fruitSelect2 - 1].name << "À»(¸¦) »ç¿ëÇØ¼­ À½·á¸¦ ¸¸µé±î?" << std::endl;
+			std::cout << "1. ´çÀå ¸¸µéÀÚ! 2. ´Ù½Ã »ı°¢ÇØº¸ÀÚ" << std::endl;
 			std::cin >> playerSelect;
 			if (playerSelect == 1) {
 				player.blendFruit(player.fruit_inventory[fruitSelect1 - 1], player.fruit_inventory[fruitSelect2 - 1]);
