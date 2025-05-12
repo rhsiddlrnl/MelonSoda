@@ -21,3 +21,10 @@ const Monster slime("슬라임", 24, 0, 5, 3);
 const Monster king_slime("킹슬라임", 37, 0, 8, 7);
 const Monster waterrat("워터렛", 49, 0, 11, 11);
 const Monster chandelier("샹들리에", 61, 6, 13, 10);
+
+std::map<int, Monster> monsterMap = {
+		{1, slime},
+		{2, king_slime},
+		{3, waterrat},
+		{5, chandelier}
+};

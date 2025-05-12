@@ -7,12 +7,7 @@
 
 int main() {
 	srand(time(NULL));
-	std::map<int, Monster> monsterMap = {
-		{1, slime},
-		{2, king_slime},
-		{3, waterrat},
-		{5, chandelier}
-	};
+	
 
 	std::string player_Name;
 
