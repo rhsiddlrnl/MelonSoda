@@ -17,6 +17,7 @@ public:
 //몬스터 선언부
 extern const Monster slime;
 extern const Monster king_slime;
+extern const Monster watterrat;
 extern const Monster chandelier;
 
 extern std::map<int, Monster> monsterMap;
