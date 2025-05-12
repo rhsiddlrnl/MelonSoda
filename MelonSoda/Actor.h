@@ -8,4 +8,6 @@ public:
 	int MP;
 	int ATK;
 	int DEF;
+
+	virtual ~Actor() {}
 };

@@ -1,5 +1,6 @@
 #pragma once
 #include "Actor.h"
+#include <map>
 
 class Monster : public Actor {
 public:
@@ -17,3 +18,5 @@ public:
 extern const Monster slime;
 extern const Monster king_slime;
 extern const Monster chandelier;
+
+extern std::map<int, Monster> monsterMap;

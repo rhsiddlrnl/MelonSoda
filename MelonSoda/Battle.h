@@ -4,6 +4,7 @@
 #include "Fruit.h"
 #include <iostream>
 #include <windows.h>
+#include <map>
 
 void Battle(Player& player, Monster& monster);
 int dmg(Actor attacker, Actor defender);

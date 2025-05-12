@@ -1,5 +1,6 @@
 #include "Battle.h"
 
+//배틀 함수는 궁금하면 읽어보고 이해하셔요
 void Battle(Player& player, Monster& monster)
 {
 	std::cout << monster.name << "이(가) 나타났다!" << std::endl;
@@ -12,11 +13,19 @@ void Battle(Player& player, Monster& monster)
 			std::cout << "1. 공격 2. 스킬 3. 스탯확인" << std::endl;
 			std::cin >> playerSelect;
 			if (playerSelect == 1) {
-				monster.HP -= dmg(player, monster);
+				int damage = dmg(player, monster);
+				monster.HP -= damage;
+
+				//마지막 공격력 저장
+				player.lastDamage = damage;
+				//참기 +1 및 능력치 증가
+				player.addConcentration();
 				break;
 			}
 			else if (playerSelect == 2) {
-				std::cout << "스킬은 아직 미구현이지비" << std::endl;
+				player.useSkill(monster);
+				break;
+				//std::cout << "스킬은 아직 미구현이지비" << std::endl;
 			}
 			else if (playerSelect == 3) {
 				player.showPStat();
@@ -28,13 +37,24 @@ void Battle(Player& player, Monster& monster)
 		if (monster.HP <= 0) {
 			continue;
 		}
+		std::cout << monster.name << "의 현재 체력은 " << monster.HP << std::endl;
 
+		//몬스터 턴
+		std::cout << std::endl;
 		std::cout << "상대 " << monster.name << "의 차례!" << std::endl;
+		Sleep(1000);
 		while (1) {
 			monsterSelect = 1;
 			if (monsterSelect == 1) {
 				std::cout << "상대 " << monster.name << "의 공격!" << std::endl;
-				player.HP -= dmg(monster, player);
+				int damage = dmg(monster, player);  //원래 데미지 계산
+				if (player.isReflecting) {
+					damage = static_cast<int>(damage * 0.7);  //30% 감소
+					std::cout << "- 튕겨내기 효과로 데미지가 감소되었습니다! (" << damage << ")\n";
+					player.isReflecting = false;  //효과 1턴만
+				}
+
+				player.HP -= damage;
 				break;
 			}
 			else if (monsterSelect == 2) {
@@ -50,19 +70,26 @@ void Battle(Player& player, Monster& monster)
 		Sleep(1000);
 		Event(player, monster);
 	}
+	else {
+		std::cout << "패배하고 말았다..." << std::endl;
+		exit(1);
+	}
 }
 
 int dmg(Actor attacker, Actor defender)
 {
-	int dmg = 0;
-	dmg = (attacker.ATK * 100) / (defender.DEF + 100);
-	std::cout << attacker.name << "이(가) " << defender.name << "에게 " << dmg << "만큼의 피해를 입혔다!" << std::endl;
-	return dmg;
+	int att = attacker.ATK;
+	int def = defender.DEF;
+
+	int damage = (att * 100) / (def + 100);
+	std::cout << attacker.name << "이(가) " << defender.name << "에게 " << damage << "만큼의 피해를 입혔다!" << std::endl;
+	return damage;
 }
+
 
 void Event(Player& player, Monster& monster)
 {
-	std::cout << "이벤트 시작!" << std::endl;
+	std::cout << std::endl;
 	int playerSelect = 0;
 	switch (monster.Event_index) {
 	case 1:		//빵부스러기
@@ -75,7 +102,7 @@ void Event(Player& player, Monster& monster)
 			std::cout << "잠깐 쉬니까 몸이 좀 회복 되는구만.. 가볼까?" << std::endl;
 			int heal = rand() % 5 + 1;
 			player.HP += heal;
-			std::cout << "플레이어의 HP : " << heal << " 만큼 회복!" << std::endl;
+			std::cout << "플레이어의 HP " << heal << " 만큼 회복!" << std::endl;
 
 		}
 		else if (playerSelect == 2) {
@@ -88,7 +115,7 @@ void Event(Player& player, Monster& monster)
 			std::cout << "잠깐 쉬니까 몸이 좀 회복 되는구만.. 가볼까?" << std::endl;
 			int heal = rand() % 5 + 1;
 			player.HP += heal;
-			std::cout << "플레이어의 HP : " << heal << " 만큼 회복!" << std::endl;
+			std::cout << "플레이어의 HP " << heal << " 만큼 회복!" << std::endl;
 		}
 		break;
 	case 2:		//슬라임
@@ -105,7 +132,7 @@ void Event(Player& player, Monster& monster)
 			std::cout << "잠깐 쉬니까 몸이 좀 회복 되는구만.. 가볼까?" << std::endl;
 			int heal = rand() % 5 + 1;
 			player.HP += heal;
-			std::cout << "플레이어의 HP : " << heal << " 만큼 회복!" << std::endl;
+			std::cout << "플레이어의 HP " << heal << " 만큼 회복!" << std::endl;
 		}
 		else if (playerSelect == 2) {
 			std::cout << "용사 : 아니 안그래도 몬스터인데 쟤 뭔가 먹고 있다고.. 그리고 무섭게 뜨거워! 나는 쟤 먹이가 되기 싫어!" << std::endl;
@@ -117,7 +144,7 @@ void Event(Player& player, Monster& monster)
 			std::cout << "잠깐 쉬니까 몸이 좀 회복 되는구만.. 가볼까?" << std::endl;
 			int heal = rand() % 5 + 1;
 			player.HP += heal;
-			std::cout << "플레이어의 HP : " << heal << " 만큼 회복!" << std::endl;
+			std::cout << "플레이어의 HP " << heal << " 만큼 회복!" << std::endl;
 		}
 		break;
 	case 3:		//주사기
@@ -132,7 +159,7 @@ void Event(Player& player, Monster& monster)
 			std::cout << "잠깐 쉬니까 몸이 좀 회복 되는구만.. 가볼까?" << std::endl;
 			int heal = rand() % 5 + 1;
 			player.HP += heal;
-			std::cout << "플레이어의 HP : " << heal << " 만큼 회복!" << std::endl;
+			std::cout << "플레이어의 HP " << heal << " 만큼 회복!" << std::endl;
 		}
 		else if (playerSelect == 2) {
 			std::cout << "저 멀리에서 무언가가 총총하고 뛰어온다." << std::endl;
@@ -144,7 +171,7 @@ void Event(Player& player, Monster& monster)
 			std::cout << "잠깐 쉬니까 몸이 좀 회복 되는구만.. 가볼까?" << std::endl;
 			int heal = rand() % 5 + 1;
 			player.HP += heal;
-			std::cout << "플레이어의 HP : " << heal << " 만큼 회복!" << std::endl;
+			std::cout << "플레이어의 HP " << heal << " 만큼 회복!" << std::endl;
 		}
 		break;
 	case 4:		//실험체
@@ -162,7 +189,7 @@ void Event(Player& player, Monster& monster)
 			std::cout << "잠깐 쉬니까 몸이 좀 회복 되는구만.. 가볼까?" << std::endl;
 			int heal = rand() % 5 + 1;
 			player.HP += heal;
-			std::cout << "플레이어의 HP : " << heal << " 만큼 회복!" << std::endl;
+			std::cout << "플레이어의 HP " << heal << " 만큼 회복!" << std::endl;
 		}
 		else if (playerSelect == 2) {
 			std::cout << "용사 : 뭐라는지 하나도 모르겠어! 죽x어!" << std::endl;
@@ -173,7 +200,7 @@ void Event(Player& player, Monster& monster)
 			std::cout << "잠깐 쉬니까 몸이 좀 회복 되는구만.. 가볼까?" << std::endl;
 			int heal = rand() % 5 + 1;
 			player.HP += heal;
-			std::cout << "플레이어의 HP : " << heal << " 만큼 회복!" << std::endl;
+			std::cout << "플레이어의 HP " << heal << " 만큼 회복!" << std::endl;
 		}
 		break;
 	case 5:		//보스 진입
@@ -203,7 +230,7 @@ void afterBattle(Player& player)
 			player.showInventory();
 		}
 		else if (playerSelect == 3) {
-			std::cout << "blend system은 아직 미구현이지비" << std::endl;
+			std::cout << std::endl;
 			int fruitSelect1 = 0;
 			int fruitSelect2 = 0;
 			std::cout << "무슨 과일로 만들까?" << std::endl;
@@ -240,4 +267,14 @@ void afterBattle(Player& player)
 			continue;
 		}
 	}
+}
+
+void GAME(Player& player, const std::map<int, Monster>& monsterMap)
+{
+	for (const auto& pair : monsterMap) {
+		const Monster& monster = pair.second;
+		Battle(player, const_cast<Monster&>(monster)); 
+		afterBattle(player);
+	}
+
 }
