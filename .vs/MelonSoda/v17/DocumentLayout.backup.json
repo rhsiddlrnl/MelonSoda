@@ -62,8 +62,7 @@
               "RelativeToolTip": "MelonSoda\\MelonSoda.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-06T11:01:03.514Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T11:01:03.514Z"
             },
             {
               "$type": "Document",
@@ -71,12 +70,11 @@
               "Title": "Monster.cpp",
               "DocumentMoniker": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\Monster.cpp",
               "RelativeDocumentMoniker": "MelonSoda\\Monster.cpp",
-              "ToolTip": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\Monster.cpp*",
-              "RelativeToolTip": "MelonSoda\\Monster.cpp*",
+              "ToolTip": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\Monster.cpp",
+              "RelativeToolTip": "MelonSoda\\Monster.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-05-06T11:07:28.274Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T11:07:28.274Z"
             },
             {
               "$type": "Document",
@@ -84,12 +82,11 @@
               "Title": "Monster.h",
               "DocumentMoniker": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\Monster.h",
               "RelativeDocumentMoniker": "MelonSoda\\Monster.h",
-              "ToolTip": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\Monster.h*",
-              "RelativeToolTip": "MelonSoda\\Monster.h*",
+              "ToolTip": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\Monster.h",
+              "RelativeToolTip": "MelonSoda\\Monster.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-06T11:07:17.708Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T11:07:17.708Z"
             },
             {
               "$type": "Document",
@@ -137,8 +134,7 @@
               "RelativeToolTip": "MelonSoda\\Player.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-06T11:07:56.27Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T11:07:56.27Z"
             },
             {
               "$type": "Document",
@@ -159,12 +155,11 @@
               "Title": "Battle.h",
               "DocumentMoniker": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\Battle.h",
               "RelativeDocumentMoniker": "MelonSoda\\Battle.h",
-              "ToolTip": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\Battle.h*",
-              "RelativeToolTip": "MelonSoda\\Battle.h*",
+              "ToolTip": "C:\\MelonSoda\\MelonSoda\\MelonSoda\\Battle.h",
+              "RelativeToolTip": "MelonSoda\\Battle.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-05-06T11:08:33.53Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T11:08:33.53Z"
             }
           ]
         }

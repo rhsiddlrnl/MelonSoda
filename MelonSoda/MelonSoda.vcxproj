@@ -134,6 +134,11 @@
     <ClCompile Include="MelonSoda.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="Reflect.cpp" />
+    <ClCompile Include="Release.cpp" />
+    <ClCompile Include="Slash.cpp" />
+    <ClCompile Include="SwordOrder.cpp" />
+    <ClCompile Include="UIManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor.h" />
@@ -142,7 +147,14 @@
     <ClInclude Include="main.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Player.h" />
+    <ClInclude Include="Reflect.h" />
+    <ClInclude Include="Release.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="Skill.h" />
+    <ClInclude Include="SkillFactory.h" />
+    <ClInclude Include="Slash.h" />
+    <ClInclude Include="SwordOrder.h" />
+    <ClInclude Include="UIManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MelonSoda.rc" />

@@ -1,12 +1,16 @@
 #pragma once
 #include "Actor.h"
 #include "Fruit.h"
+#include "SkillFactory.h"
 #include <vector>
+#include <map>
+#include <memory>
 #include "Monster.h"
 
 //플레이어는 기본액터 상속
 //추가된 것: 인벤토리, 스토리 번호(스토리 순서대로 출력용), 생성자에 이름 매개변수로 받음(게임하는 사람이 입력함), 여러가지 함수들
 class Player : public Actor {
+
 public:
 	std::vector<FRUIT> fruit_inventory;
 	std::vector<DRINK> drink_inventory;
@@ -18,11 +22,15 @@ public:
 	int lastDamage;
 	//1턴 동안 데미지 감소 상태 여부
 	bool isReflecting;
+	//받은 데미지 저장
+	int hitDamage;
 
-	Player(std::string player_name);
+	Player();
+
+	void Setname(std::string input);
 
 	//플레이어 스탯 보여주는 함수
-	void showPStat();
+	/*void showPStat();*/
 	//플레이어 인벤토리 보여주는 함수
 	void showInventory();
 	//플레이어 인벤토리에 과일 추가하는 함수
@@ -35,14 +43,8 @@ public:
 	void addDrink(DRINK drink);
 	//플레이어 참기 함수
 	void addConcentration();
-	// 스킬 메뉴 함수
-	void useSkill(Monster& monster);
-	// 소드 오러 스킬
-	void swordOrder(Monster& monster);
-	// 베기 스킬
-	void slash(Monster& monster);
-	//튕겨내기 스킬
-	void reflect();
-	// 릴리즈 스킬
-	void release(Monster& monster);
+	// 스킬 사용 함수
+	int useSkill(Monster& monster);
+	// 스킬 맵
+	static std::map<int, std::unique_ptr<Skill>> skills;
 };

@@ -1,4 +1,6 @@
 #include "Fruit.h"
+#include "UIManager.h"
+
 #include <iostream>
 #include <map>
 
@@ -61,7 +63,7 @@ DRINK operator+(const FRUIT& fruit1, const FRUIT& fruit2)
         return drinkMap[blendIndex];
     }
     else {
-        std::cout << "흠...더 나은 조합법이 있지 않았을까?" << std::endl;
+        G_UI->PrintLog( "흠...더 나은 조합법이 있지 않았을까?");
         return DRINK("그냥저냥 음료수", 0, 0, 2, 2);
     }
 }
